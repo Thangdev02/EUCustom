@@ -9,6 +9,7 @@
       { "handle": "filesystem" },
       { "src": "/.*", "dest": "/index.html" }
     ],
+    "regions": ["sin1"],
     "buildCommand": "npm run build",
     "outputDirectory": "dist"
   }
