@@ -27,7 +27,7 @@ export default function Diensten() {
       <div className="max-w-7xl mx-auto px-4 grid md:grid-cols-3 gap-12">
         {/* LEFT CONTENT */}
         <div className="md:col-span-2">
-          <h2 className="diensten-title text-2xl md:text-3xl font-bold text-[#2B5A8E] mb-6">
+          <h2 className="diensten-title text-2xl md:text-3xl font-bold text-[#f2692a] mb-6">
             Hoe kan EU Customs u helpen?
           </h2>
 
@@ -45,7 +45,7 @@ export default function Diensten() {
             kunnen we uw aangifte direct bij de douane in het computersysteem zetten.
           </p>
 
-          <h3 className="diensten-title text-xl font-semibold text-[#2B5A8E] mb-4">
+          <h3 className="diensten-title text-xl font-semibold text-[#f2692a] mb-4">
             Ons pakket aan diensten bestaat onder andere uit:
           </h3>
 
@@ -54,7 +54,7 @@ export default function Diensten() {
               In- en{" "}
               <a
                 href="#"
-                className="text-[#2B5A8E] hover:underline font-medium"
+                className="text-[#f2692a] hover:underline font-medium"
               >
                 uitvoeraangiften
               </a>{" "}
@@ -64,7 +64,7 @@ export default function Diensten() {
               Voorschieten van invoerrechten, heffingen, accijnzen en BTW bij{" "}
               <a
                 href="#"
-                className="text-[#2B5A8E] hover:underline font-medium"
+                className="text-[#f2692a] hover:underline font-medium"
               >
                 importdocumenten
               </a>
@@ -73,7 +73,7 @@ export default function Diensten() {
               Aanvragen van{" "}
               <a
                 href="#"
-                className="text-[#2B5A8E] hover:underline font-medium"
+                className="text-[#f2692a] hover:underline font-medium"
               >
                 douanevergunningen
               </a>
@@ -81,7 +81,7 @@ export default function Diensten() {
             <li>
               <a
                 href="#"
-                className="text-[#2B5A8E] hover:underline font-medium"
+                className="text-[#f2692a] hover:underline font-medium"
               >
                 Passieve veredeling
               </a>
@@ -92,7 +92,7 @@ export default function Diensten() {
             <li>
               <a
                 href="#"
-                className="text-[#2B5A8E] hover:underline font-medium"
+                className="text-[#f2692a] hover:underline font-medium"
               >
                 Advies
               </a>{" "}
@@ -102,7 +102,7 @@ export default function Diensten() {
               Optreden als{" "}
               <a
                 href="#"
-                className="text-[#2B5A8E] hover:underline font-medium"
+                className="text-[#f2692a] hover:underline font-medium"
               >
                 beperkt fiscaalvertegenwoordiger
               </a>
@@ -119,7 +119,7 @@ export default function Diensten() {
             Heeft u vragen over deze of de vele andere mogelijkheden?{" "}
             <a
               href="#"
-              className="text-[#2B5A8E] font-semibold hover:underline"
+              className="text-[#f2692a] font-semibold hover:underline"
             >
               Neem contact met ons op.
             </a>

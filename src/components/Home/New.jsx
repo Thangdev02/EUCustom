@@ -4,14 +4,15 @@ import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import axios from "axios";
 import { motion } from "framer-motion";
+import { getAllNews } from "../../services/newsApi";
 
 export default function News() {
   const [newsItems, setNewsItems] = useState([]);
 
-  useEffect(() => {
-    axios.get("http://localhost:5000/news").then((res) => setNewsItems(res.data));
-  }, []);
-
+   useEffect(() => {
+     getAllNews().then((data) => setNewsItems(data));
+   }, []);
+ 
   if (newsItems.length === 0)
     return <p className="text-center py-20">Loading...</p>;
 
@@ -31,7 +32,7 @@ export default function News() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
-          className="text-3xl md:text-4xl font-bold mb-12 text-center text-[#2B5A8E]"
+          className="text-3xl md:text-4xl font-bold mb-12 text-center text-[#f2692a]"
         >
           Blijf op de hoogte
         </motion.h2>
@@ -71,7 +72,7 @@ export default function News() {
             whileInView="visible"
             viewport={{ once: true, amount: 0.3 }}
           >
-            <h3 className="text-xl font-bold text-[#2B5A8E] mb-4">ONZE RUBRIEKEN:</h3>
+            <h3 className="text-xl font-bold text-[#f2692a] mb-4">ONZE RUBRIEKEN:</h3>
             <div className="space-y-3">
               {sideNews.map((item, i) => (
                 <motion.div

@@ -108,7 +108,7 @@ export default function Hero() {
         >
           <Link
             to="/over-ons"
-            className="bg-[#0d1b2a] text-white px-8 py-3 rounded-full font-semibold hover:bg-[#1b263b] transition flex items-center gap-2 w-fit"
+            className="bg-[#f48126] text-white px-8 py-3 rounded-full font-semibold hover:bg-[#1b263b] transition flex items-center gap-2 w-fit"
           >
             LEES MEER
             <ChevronRight size={20} />

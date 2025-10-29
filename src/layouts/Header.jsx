@@ -16,7 +16,7 @@ export default function Header() {
   ];
 
   return (
-    <header className="bg-gradient-to-r from-[#0D1635] to-[#2B5A8E] text-white sticky top-0 z-50 shadow-md">
+    <header className="bg-gradient-to-r from-[#f48425] to-[#f1672a] text-white sticky top-0 z-50 shadow-md">
       <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
         {/* LOGO */}
         <div className="flex items-center gap-3">
@@ -38,8 +38,8 @@ export default function Header() {
               className={({ isActive }) =>
                 `relative transition-all duration-200 ${
                   isActive
-                    ? "text-[#FFD700] after:absolute after:bottom-[-4px] after:left-0 after:w-full after:h-[2px] after:bg-[#FFD700]"
-                    : "text-white hover:text-[#FFD700]"
+                    ? "text-[#122967] after:absolute after:bottom-[-4px] after:left-0 after:w-full after:h-[2px] after:bg-[#122967]"
+                    : "text-white hover:text-[#122967]"
                 }`
               }
             >

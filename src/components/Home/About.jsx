@@ -23,12 +23,12 @@ export default function About() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
-          className="text-3xl md:text-4xl font-bold mb-12 text-[#2B5A8E] text-center md:text-left"
+          className="text-3xl md:text-4xl font-bold mb-12 text-[#f2692a] text-center md:text-left"
         >
           Al uw douanezaken volledig verzorgd
         </motion.h2>
 
-        {/* Phần giới thiệu và logo */}
+        {/* Phần giới thiệu và logo */} 
         <div className="grid md:grid-cols-3 gap-8 mb-16">
           <motion.div
             className="md:col-span-2"
@@ -45,7 +45,7 @@ export default function About() {
             </p>
             <a
               href="#"
-              className="text-[#2B5A8E] font-semibold hover:underline inline-block"
+              className="text-[#f48124] font-semibold hover:underline inline-block"
             >
               Lees hier meer over ons bedrijf →
             </a>
@@ -77,7 +77,7 @@ export default function About() {
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
         >
-          <h3 className="text-2xl md:text-3xl font-bold mb-6 text-[#2B5A8E]">
+          <h3 className="text-2xl md:text-3xl font-bold mb-6 text-[#f26f2a]">
             Dé douanespecialisten voor Nederland en België
           </h3>
           <p className="text-gray-600 leading-relaxed mb-6">
@@ -96,7 +96,7 @@ export default function About() {
           whileInView="visible"
           viewport={{ once: true, amount: 0.3 }}
         >
-          <h3 className="text-2xl md:text-3xl font-bold mb-6 text-[#2B5A8E]">
+          <h3 className="text-2xl md:text-3xl font-bold mb-6 text-[#f26f2a]">
             Advies en ondersteuning
           </h3>
           <p className="text-gray-600 leading-relaxed">

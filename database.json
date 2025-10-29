@@ -1,0 +1,29 @@
+{
+  "news": [
+    {
+      "id": "1",
+      "title": "REX vergunning VK niet verplicht voor boom- en plantgoed",
+      "date": "10 januari 2022",
+      "image": "/newsimg1.jpg",
+      "shortDescription": "Voor boom- en plantgoed is de REX-vergunning voor het VK niet verplicht meer.",
+      "content": "<p>Het Verenigd Koninkrijk is sinds 1 januari 2021 niet langer onderdeel van de EU. Eind 2020 kwam er nog een Brexit-deal, maar dat heeft wel gezorgd voor meer administratieve lasten. Bedrijven die zaken doen met Britse ondernemingen moeten hun documenten op orde brengen...</p>"
+    },
+    {
+      "id": "2",
+      "title": "Nieuwe fase Brexit vanaf 1 januari 2022",
+      "date": "28 december 2021",
+      "image": "/newsimage2.jpeg",
+      "shortDescription": "Vanaf 1 januari 2022 start een nieuwe fase in het Brexit-proces.",
+      "content": "<p>Vanaf 1 januari 2022 gelden nieuwe douaneregels voor goederen die tussen het VK en de EU worden vervoerd. Deze fase brengt meer controles en vereisten met zich mee...</p>"
+    },
+    {
+      "id": "3",
+      "title": "Douaneregels voor exporteurs na Brexit",
+      "date": "5 februari 2022",
+      "image": "/newsimg3.jpeg",
+      "shortDescription": "Exporteurs krijgen te maken met strengere douaneregels.",
+      "content": "<p>Na de Brexit moeten exporteurs rekening houden met een reeks nieuwe regels. Dit geldt met name voor bedrijven die eerder eenvoudig naar het VK exporteerden...</p>"
+    }
+   
+  ]
+}

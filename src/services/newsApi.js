@@ -3,7 +3,7 @@ import axios from "axios";
 
 const API_BASE =
   import.meta.env.MODE === "development"
-    ? "http://localhost:3000/api"
+    ? "http://localhost:5000"
     : "/api";
 
 export const getAllNews = async () => {

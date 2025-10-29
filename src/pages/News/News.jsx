@@ -35,7 +35,7 @@ export default function News() {
               />
             )}
 
-            <h2 className="text-2xl font-bold text-[#0D1635] mb-1">
+            <h2 className="text-2xl font-bold text-[#f2692a] mb-1">
               {item.title}
             </h2>
             <p className="text-gray-500 text-sm mb-3">{item.date}</p>
@@ -45,7 +45,7 @@ export default function News() {
 
             <Link
               to={`/news/${item.id}`}
-              className="text-[#2B5A8E] font-semibold hover:underline"
+              className="text-[#f2692a] font-semibold hover:underline"
             >
               Lees verder
             </Link>

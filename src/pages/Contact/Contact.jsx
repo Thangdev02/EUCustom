@@ -45,7 +45,7 @@ export default function Contact() {
 
           {/* Addresses */}
           <motion.div variants={fadeUp} custom={0.4}>
-            <h3 className="text-lg md:text-xl font-bold text-[#2B5A8E] mb-3">
+            <h3 className="text-lg md:text-xl font-bold text-[#f2692a] mb-3">
               Nederland
             </h3>
             <p className="text-gray-700 mb-1">Treeport 5</p>
@@ -54,7 +54,7 @@ export default function Contact() {
               Telefoon:{" "}
               <a
                 href="tel:+31765964921"
-                className="text-[#2B5A8E] hover:underline"
+                className="text-[#f2692a] hover:underline"
               >
                 +31 (0)76-5964921
               </a>
@@ -63,13 +63,13 @@ export default function Contact() {
               E-mail:{" "}
               <a
                 href="mailto:infoeucustoms.nl"
-                className="text-[#2B5A8E] hover:underline"
+                className="text-[#f2692a] hover:underline"
               >
                 info@eucustoms.nl
               </a>
             </p>
 
-            <h3 className="text-lg md:text-xl font-bold text-[#2B5A8E] mb-3">
+            <h3 className="text-lg md:text-xl font-bold text-[#f2692a] mb-3">
               België
             </h3>
             <p className="text-gray-700 mb-1">Amsterdamstraat 32</p>
@@ -78,7 +78,7 @@ export default function Contact() {
               Telefoon:{" "}
               <a
                 href="tel:+3236649672"
-                className="text-[#2B5A8E] hover:underline"
+                className="text-[#f2692a] hover:underline"
               >
                 +32 (0)3-6649672
               </a>
@@ -87,7 +87,7 @@ export default function Contact() {
               E-mail:{" "}
               <a
                 href="mailto:info@wacustoms.be"
-                className="text-[#2B5A8E] hover:underline"
+                className="text-[#f2692a] hover:underline"
               >
                 info@eucustoms.be
               </a>
