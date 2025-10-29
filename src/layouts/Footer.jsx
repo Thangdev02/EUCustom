@@ -1,0 +1,66 @@
+"use client"
+
+import { Phone, Mail, Facebook, Linkedin } from "lucide-react"
+
+export default function Footer() {
+  return (
+    <footer className="bg-gradient-to-r from-[#2B5A8E] to-[#1e4620] text-white py-16">
+      <div className="max-w-7xl mx-auto px-4">
+        <div className="grid md:grid-cols-4 gap-12 mb-12">
+          {/* Logo */}
+          <div>
+            <div className="w-20 h-20 bg-white rounded-full flex items-center justify-center border-4 border-[#E63946] mb-4">
+              <span className="text-[#E63946] font-bold text-lg">EU</span>
+            </div>
+          </div>
+
+          {/* Contact */}
+          <div>
+            <h3 className="font-bold text-lg mb-4">CONTACTGEGEVENS</h3>
+            <div className="space-y-3">
+              <div className="flex items-center gap-2">
+                <Phone size={18} />
+                <a href="tel:+31076594921" className="hover:text-[#FFD700] transition">
+                  +31 (0)76 596 49 21
+                </a>
+              </div>
+              <div className="flex items-center gap-2">
+                <Mail size={18} />
+                <a href="mailto:info@wacustoms.nl" className="hover:text-[#FFD700] transition">
+                  info@eucustoms.nl
+                </a>
+              </div>
+            </div>
+          </div>
+
+          {/* Hours */}
+          <div>
+            <h3 className="font-bold text-lg mb-4">OPENINGSTIJDEN</h3>
+            <div className="space-y-2 text-sm">
+              <p>Ma t/m vr: 07:00 - 21:00</p>
+              <p>Zaterdag: 09:00 - 13:00</p>
+            </div>
+          </div>
+
+          {/* Social */}
+          <div>
+            <h3 className="font-bold text-lg mb-4">VOLG ONS</h3>
+            <div className="flex gap-4">
+              <a href="#" className="hover:text-[#FFD700] transition">
+                <Facebook size={24} />
+              </a>
+              <a href="#" className="hover:text-[#FFD700] transition">
+                <Linkedin size={24} />
+              </a>
+            </div>
+          </div>
+        </div>
+
+        {/* Bottom */}
+        <div className="border-t border-white/20 pt-8 text-center text-sm text-gray-300">
+          <p>Privacy verklaring - Algemene voorwaarden - Realisatie: Dlogie</p>
+        </div>
+      </div>
+    </footer>
+  )
+}
