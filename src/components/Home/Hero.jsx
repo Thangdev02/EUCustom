@@ -10,16 +10,16 @@ export default function Hero() {
     {
       image: "/image1.jpg",
       title:
-        "Onafhankelijk en betrouwbaar douane-expediteur voor Nederland en België",
+        "Betrouwbare douane-specialist voor import en export binnen Nederland en andere Europese landen.",
       description:
-        "Hulp nodig bij import, export of andere douanegerelateerde zaken? Het team van EU Customs staat voor u klaar met advies, hulp en de praktische uitvoering van uw internationale handel.",
+        "Zoekt u professionele ondersteuning bij import, export of andere douaneprocedures? Het ervaren team van EU Customs staat voor u klaar met advies op maat en efficiënte uitvoering van uw internationale handel.",
     },
     {
       image: "/homeimg2.jpg",
       title:
-        "Uw betrouwbare partner voor douaneafhandeling en logistieke oplossingen",
+        "Betrouwbare douane- en logistiekpartner voor bedrijven in heel Europa",
       description:
-        "EU Customs biedt maatwerkoplossingen voor bedrijven die internationaal handelen, met expertise in douane, transport en compliance.",
+        "Met uitgebreide kennis van douane, transport en compliance biedt EU Customs flexibele oplossingen voor uw internationale handel.",
     },
   ];
 

@@ -61,9 +61,9 @@ export default function About() {
           >
             <div className="w-72 h-48 bg-gray-100 rounded-lg flex items-center justify-center shadow-sm">
               <img
-                src="/sectionlogo1.png"
+                src="/importship.jpg"
                 alt="KIWA Logo"
-                className="w-72 h-48 object-contain"
+                className="w-72 h-48 object-contain rounded"
               />
             </div>
           </motion.div>

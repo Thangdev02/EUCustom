@@ -12,6 +12,10 @@ import Diensten from "./pages/Diensten/Diensten"
 import OverOns from "./pages/OverOns/OverOns"
 import Contact from "./pages/Contact/Contact"
 import Vacatures from "./pages/Vacatures/Vacatures"
+import Exporteren from "./pages/Diensten/Exporteren"
+import Importeren from "./pages/Diensten/Importeren"
+import Consultancy from "./pages/Diensten/Consultancy"
+import Transitdocumenten from "./pages/Diensten/Transitdocumenten"
 
 
 export default function Home() {
@@ -28,6 +32,11 @@ export default function Home() {
         <Route path="/over-ons" element={<OverOns />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/vacatures" element={<Vacatures />} />
+        <Route path="/diensten/exporteren" element={<Exporteren />} />
+        <Route path="/diensten/importeren" element={<Importeren />} />
+        <Route path="/diensten/consultancy" element={<Consultancy />} />
+        <Route path="/diensten/transitdocumenten" element={<Transitdocumenten />} />
+
       </Routes>
       <Footer />
 

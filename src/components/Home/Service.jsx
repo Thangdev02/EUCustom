@@ -3,13 +3,34 @@
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useEffect, useState, useRef } from "react";
 import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
 export default function Services() {
   const services = [
-    { image: "./homeimage1.jpg", title: "Exporteren", description: "Professionele export services" },
-    { image: "./homeimage2.jpg", title: "Importeren", description: "Veilige import procedures" },
-    { image: "./homeimage3.jpg", title: "Transitdocumenten", description: "Complete transit documentation" },
-    { image: "./homeimage4.jpg", title: "Douaneadvies", description: "Advies door experts" },
+    {
+      image: "./homeimage1.jpg",
+      title: "Exporteren",
+      description: "Professionele export services",
+      link: "/diensten/exporteren",
+    },
+    {
+      image: "./homeimage2.jpg",
+      title: "Importeren",
+      description: "Veilige import procedures",
+      link: "/diensten/importeren",
+    },
+    {
+      image: "./homeimage3.jpg",
+      title: "Consultancy",
+      description: "Complete consultancy",
+      link: "/diensten/consultancy",
+    },
+    {
+      image: "./homeimage4.jpg",
+      title: "Transitdocumenten",
+      description: "Advies door experts",
+      link: "/diensten/transitdocumenten",
+    },
   ];
 
   const [itemsPerView, setItemsPerView] = useState(3);
@@ -54,21 +75,25 @@ export default function Services() {
                   className="flex-shrink-0 p-3"
                   style={{ width: `calc(100% / ${itemsPerView})` }}
                 >
-                  <div className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition h-full flex flex-col">
+                  <Link
+                    to={s.link}
+                    className="group block bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition h-full flex flex-col border border-transparent hover:border-[#f37727]"
+                  >
                     <div className="h-48 bg-gray-100 overflow-hidden">
                       <motion.img
                         src={s.image}
                         alt={s.title}
-                        className="w-full h-full object-cover"
-                        whileHover={{ scale: 1.05 }}
-                        transition={{ duration: 0.4 }}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                       />
                     </div>
                     <div className="p-6 flex-1">
-                      <h3 className="text-xl font-bold text-[#f37727] mb-2">{s.title}</h3>
+                      <h3 className="text-xl font-bold text-[#f37727] mb-2 group-hover:underline">
+                        {s.title}
+                      </h3>
                       <p className="text-gray-600">{s.description}</p>
                     </div>
-                  </div>
+                   
+                  </Link>
                 </div>
               ))}
             </motion.div>
@@ -82,7 +107,7 @@ export default function Services() {
               index === 0 ? "opacity-40 cursor-not-allowed" : ""
             }`}
           >
-            <ChevronLeft size={20} className="text-[#2B5A8E]" />
+            <ChevronLeft size={20} className="text-[#f37727]" />
           </button>
 
           <button
@@ -92,16 +117,19 @@ export default function Services() {
               index === maxIndex ? "opacity-40 cursor-not-allowed" : ""
             }`}
           >
-            <ChevronRight size={20} className="text-[#2B5A8E]" />
+            <ChevronRight size={20} className="text-[#f37727]" />
           </button>
         </div>
 
         {/* CTA */}
         <div className="flex justify-center mt-8">
-          <button className="bg-[#1a1a2e] text-white px-8 py-3 rounded-full font-semibold hover:bg-[#0f0f1e] transition flex items-center gap-2">
+          <Link
+            to="/diensten"
+            className="bg-[#f37727] text-white px-8 py-3 rounded-full font-semibold hover:bg-[#d65c0d] transition flex items-center gap-2"
+          >
             ALLE DIENSTEN
             <ChevronRight size={20} />
-          </button>
+          </Link>
         </div>
       </div>
     </section>

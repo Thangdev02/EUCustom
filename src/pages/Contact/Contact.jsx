@@ -48,15 +48,16 @@ export default function Contact() {
             <h3 className="text-lg md:text-xl font-bold text-[#f2692a] mb-3">
               Nederland
             </h3>
-            <p className="text-gray-700 mb-1">Treeport 5</p>
-            <p className="text-gray-700 mb-1">4891 PZ, Rijsbergen</p>
+            <p className="text-gray-700 mb-1">Amsterdam</p>
+            <p className="text-gray-700 mb-1">Oud-Gastel, North Brabant 4751 VK</p>
             <p className="text-gray-700 mb-1">
               Telefoon:{" "}
               <a
                 href="tel:+31765964921"
                 className="text-[#f2692a] hover:underline"
               >
-                +31 (0)76-5964921
+                + 31 (0) 85 0669 200
+
               </a>
             </p>
             <p className="text-gray-700 mb-6">
@@ -69,29 +70,7 @@ export default function Contact() {
               </a>
             </p>
 
-            <h3 className="text-lg md:text-xl font-bold text-[#f2692a] mb-3">
-              België
-            </h3>
-            <p className="text-gray-700 mb-1">Amsterdamstraat 32</p>
-            <p className="text-gray-700 mb-1">2321, Hoogstraten/Meer</p>
-            <p className="text-gray-700 mb-1">
-              Telefoon:{" "}
-              <a
-                href="tel:+3236649672"
-                className="text-[#f2692a] hover:underline"
-              >
-                +32 (0)3-6649672
-              </a>
-            </p>
-            <p className="text-gray-700">
-              E-mail:{" "}
-              <a
-                href="mailto:info@wacustoms.be"
-                className="text-[#f2692a] hover:underline"
-              >
-                info@eucustoms.be
-              </a>
-            </p>
+            
           </motion.div>
         </motion.div>
 

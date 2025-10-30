@@ -2,44 +2,110 @@
 
 import { useState } from "react";
 import { NavLink } from "react-router-dom";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ChevronDown } from "lucide-react";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
+  const [showServices, setShowServices] = useState(false);
+
+  const diensten = [
+    { title: "EXPORTEREN", link: "/diensten/exporteren" },
+    { title: "IMPORTEREN", link: "/diensten/importeren" },
+    { title: "CONSULTANCY", link: "/diensten/consultancy" },
+    { title: "TRANSIT DOCUMENTEN", link: "/diensten/transitdocumenten" },
+  ];
 
   const navLinks = [
-    { to: "/", label: "HOME" },
-    { to: "/diensten", label: "DIENSTEN" },
     { to: "/over-ons", label: "OVER ONS" },
     { to: "/news", label: "NIEUWS" },
     { to: "/contact", label: "CONTACT" },
   ];
 
   return (
-    <header className="bg-gradient-to-r from-[#f48425] to-[#f1672a] text-white sticky top-0 z-50 shadow-md">
-      <div className="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
+    <header className="bg-[#E96C27] text-white sticky top-0 z-50 shadow-md">
+      <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between relative">
         {/* LOGO */}
         <div className="flex items-center gap-3">
-          <div className="w-14 h-14 bg-white rounded-full flex items-center justify-center border-4 border-[#E63946] shadow-sm">
-            <span className="text-[#E63946] font-extrabold text-xl">EU</span>
+          <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center border-4 border-[#E63946] shadow-sm">
+            <span className="text-[#E63946] font-extrabold text-lg">EU</span>
           </div>
           <span className="hidden sm:inline font-bold text-xl tracking-wide">
-            CUSTOMS
+            CUSTOM
           </span>
         </div>
 
         {/* DESKTOP NAV */}
-        <nav className="hidden md:flex items-center gap-8 font-semibold">
+        <nav className="hidden md:flex items-center gap-8 font-semibold relative">
+          <NavLink
+            to="/"
+            end
+            className={({ isActive }) =>
+              `pb-1 border-b-2 transition-all duration-200 ${
+                isActive
+                  ? "border-[#122967] text-[#122967]"
+                  : "border-transparent text-white hover:text-[#122967]"
+              }`
+            }
+          >
+            HOME
+          </NavLink>
+
+          {/* Dropdown DIENSTEN */}
+          <div
+            className="relative"
+            onMouseEnter={() => setShowServices(true)}
+            onMouseLeave={() => setShowServices(false)}
+          >
+            <button
+              className={`flex items-center gap-1 pb-1 border-b-2 transition-all duration-200 ${
+                showServices
+                  ? "border-[#122967] text-[#122967]"
+                  : "border-transparent text-white hover:text-[#122967]"
+              }`}
+            >
+              DIENSTEN
+              <ChevronDown
+                size={16}
+                className={`transition-transform ${
+                  showServices ? "rotate-180" : "rotate-0"
+                }`}
+              />
+            </button>
+
+            {/* Dropdown menu */}
+            <div
+              className={`absolute left-0 top-full mt-2 bg-white rounded-md shadow-lg transform transition-all duration-300 ease-out origin-top ${
+                showServices
+                  ? "opacity-100 scale-y-100 visible"
+                  : "opacity-0 scale-y-0 invisible"
+              }`}
+            >
+              <ul className="flex flex-col py-3 px-6 w-60">
+                {diensten.map((item) => (
+                  <li key={item.link}>
+                    <NavLink
+                      to={item.link}
+                      className="block py-2 text-[#122967] text-sm hover:text-[#E96C27] transition-colors"
+                    >
+                      {item.title}
+                    </NavLink>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          </div>
+
+          {/* OTHER LINKS */}
           {navLinks.map((link) => (
             <NavLink
               key={link.to}
               to={link.to}
               end
               className={({ isActive }) =>
-                `relative transition-all duration-200 ${
+                `pb-1 border-b-2 transition-all duration-200 ${
                   isActive
-                    ? "text-[#122967] after:absolute after:bottom-[-4px] after:left-0 after:w-full after:h-[2px] after:bg-[#122967]"
-                    : "text-white hover:text-[#122967]"
+                    ? "border-[#122967] text-[#122967]"
+                    : "border-transparent text-white hover:text-[#122967]"
                 }`
               }
             >
@@ -63,28 +129,58 @@ export default function Header() {
 
       {/* MOBILE MENU */}
       <div
-        className={`md:hidden bg-[#1A2E57] transition-all duration-300 overflow-hidden ${
+        className={`md:hidden bg-[#122967] transition-all duration-300 overflow-hidden ${
           isOpen ? "max-h-96 py-4" : "max-h-0"
         }`}
       >
-        <nav className="flex flex-col items-start gap-4 px-6 text-sm font-medium">
+        <nav className="flex flex-col items-start gap-4 px-6 text-sm font-medium text-white">
+          <NavLink to="/" end onClick={() => setIsOpen(false)}>
+            HOME
+          </NavLink>
+
+          {/* Mobile dropdown */}
+          <div className="w-full">
+            <button
+              onClick={() => setShowServices(!showServices)}
+              className="w-full flex justify-between items-center"
+            >
+              DIENSTEN
+              <ChevronDown
+                size={16}
+                className={`transition-transform ${
+                  showServices ? "rotate-180" : "rotate-0"
+                }`}
+              />
+            </button>
+
+            {showServices && (
+              <ul className="pl-4 mt-2 flex flex-col gap-2 text-white">
+                {diensten.map((item) => (
+                  <li key={item.link}>
+                    <NavLink
+                      to={item.link}
+                      onClick={() => setIsOpen(false)}
+                      className="block hover:text-[#F48425]"
+                    >
+                      {item.title}
+                    </NavLink>
+                  </li>
+                ))}
+              </ul>
+            )}
+          </div>
+
           {navLinks.map((link) => (
             <NavLink
               key={link.to}
               to={link.to}
-              end
               onClick={() => setIsOpen(false)}
-              className={({ isActive }) =>
-                `transition ${
-                  isActive
-                    ? "text-[#FFD700]"
-                    : "text-white hover:text-[#FFD700]"
-                }`
-              }
+              className="hover:text-[#F48425]"
             >
               {link.label}
             </NavLink>
           ))}
+
           <button className="mt-2 bg-white text-[#2B5A8E] px-3 py-1 rounded-full text-sm font-semibold hover:bg-gray-100 transition">
             EN
           </button>

@@ -26,48 +26,56 @@ export default function OverOns() {
       <div className="max-w-7xl mx-auto px-4 grid md:grid-cols-3 gap-12">
         {/* LEFT CONTENT */}
         <div className="md:col-span-2">
+          <div className="row">
+            <div className="col-3">
+              <img style={{ width: "100%", height: "80%" }} src="./over.jpg" alt="" />
+            </div>
+            <div className="col-9">
           <h2 className="reveal-top text-2xl md:text-3xl font-bold text-[#f2692a] mb-6">
-            EU Customs: dé douanespecialist in Breda
+            EU Customs: expertise in douanezaken, gevestigd in Brabant
           </h2>
 
           <p className="reveal-left text-gray-700 leading-relaxed mb-6">
-            Al ruim 20 jaar helpt WA Customs bedrijven en organisaties met hun
-            douaneformaliteiten en andere transportdocumenten. Onze centrale
-            ligging op Hazeldonk, aan de Belgische grens bij Breda, zorgt ervoor
-            dat ons kantoor makkelijk bereikbaar is voor zowel de Nederlandse
-            als de Belgische markt.
+            EU Customs begeleidt al ruim 20 jaar bedrijven en organisaties bij alle douaneformaliteiten en transportdocumenten. Door onze strategische locatie op Hazeldonk, aan de Belgische grens bij Breda, bedienen wij eenvoudig klanten in Nederland en door heel Europa.
           </p>
+          </div>
+          </div>
+        
 
           <h3 className="reveal-top text-xl md:text-2xl font-bold text-[#f2692a] mb-4">
-            Alle douanezaken op 1 adres
+            Één aanspreekpunt voor al uw douanezaken.
           </h3>
 
           <p className="reveal-left text-gray-700 leading-relaxed mb-6">
-            Door te investeren in kennis heeft EU Customs zich ontwikkeld tot
-            allround douane-expediteur voor alle sectoren. En daar is het niet
-            bij gebleven: sinds 2020 is het platform{" "}
-            <a href="#" className="text-[#f2692a] hover:underline font-medium">
-              We Are Customs
-            </a>{" "}
-            actief. Hier is de specialistische kennis van{" "}
-            <a href="#" className="text-[#f2692a] hover:underline font-medium">
-              EU Customs
-            </a>{" "}
-            gebundeld met de online DIY-service van{" "}
-            <a href="#" className="text-[#f2692a] hover:underline font-medium">
-              YourCustoms
-            </a>{" "}
-            en de douanesoftware van{" "}
-            <a href="#" className="text-[#f2692a] hover:underline font-medium">
-              WAYC
+            Door continu te investeren in kennis en ervaring heeft
+            <a href="#" className="text-[#f2692a] hover:underline font-medium mx-1">
+             EU Customs
             </a>
-            . Via We Are Customs komen al onze services samen en kunnen we voor
-            elke douanevraag gericht kijken wat het beste bij u en uw
-            onderneming past.
+             
+              zich ontwikkeld tot een allround douane-expediteur voor alle sectoren.
+              <br />
+            Maar daar is het niet bij gebleven: sinds 2020 is het platform
+            <a href="#" className="text-[#f2692a] hover:underline font-medium mx-1">
+             We Are Customs actief.
+            </a>
+            Hierin is de specialistische kennis van
+            <a href="#" className="text-[#f2692a] hover:underline font-medium mx-1">
+             EU Customs
+            </a>
+              gecombineerd met de online DIY-service van YourCustoms en de douanesoftware van 
+              <a href="#" className="text-[#f2692a] hover:underline font-medium mx-1">
+              WAYC.
+            </a>
+            <br/>
+            Via
+            <a href="#" className="text-[#f2692a] hover:underline font-medium mx-1">
+             We Are Customs
+             </a>
+              brengen we al onze expertise en diensten samen, zodat we voor elke douanevraag de meest passende oplossing kunnen bieden – afgestemd op uw onderneming.
           </p>
 
           <div className="reveal-bottom flex flex-wrap gap-8 my-8">
-            <img src="/overimage1.jpg" alt="WA Customs" className="w-62 h-auto rounded-lg shadow" />
+            <img src="/overbn.jpg" alt="WA Customs" className="rounded-lg shadow" style={{ width: "100%", height: "200px", objectFit: "cover" }} />
           </div>
 
           <h3 className="reveal-top text-xl md:text-2xl font-bold text-[#f2692a] mb-4">
@@ -83,28 +91,7 @@ export default function OverOns() {
             leveren en u snel van dienst zijn.
           </p>
 
-          <h3 className="reveal-top text-xl md:text-2xl font-bold text-[#f2692a] mb-4">
-            Ook actief in België
-          </h3>
-          <p className="reveal-right text-gray-700 leading-relaxed mb-6">
-            EU Customs is er niet alleen voor Nederlandse bedrijven, maar heeft
-            ook een kantoor in Hoogstraten. Als douane-expediteur in het
-            grensgebied, vlakbij Antwerpen, biedt dit veel voordelen omdat we
-            ook de Belgische markt kunnen bedienen. Op de{" "}
-            <a href="#" className="text-[#f2692a] hover:underline font-medium">
-              website
-            </a>{" "}
-            van onze Belgische collega’s vindt u hierover meer informatie.
-          </p>
-
-          <p className="reveal-bottom text-gray-700">
-            Meer weten over onze diensten? Of heeft u een specifieke
-            douanevraag? Neem gerust vrijblijvend{" "}
-            <a href="#" className="text-[#f2692a] font-semibold hover:underline">
-              contact
-            </a>{" "}
-            met ons op!
-          </p>
+          
         </div>
 
         {/* RIGHT CONTACT FORM */}

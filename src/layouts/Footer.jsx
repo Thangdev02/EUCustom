@@ -21,7 +21,7 @@ export default function Footer() {
               <div className="flex items-center gap-2">
                 <Phone style={{color: "#106efd"}} size={18} />
                 <a href="tel:+31076594921" style={{color: "inherit"}} className="hover:text-[#FFD700] transition">
-                  +31 (0)76 596 49 21
+                + 31 (0) 85 0669 200
                 </a>
               </div>
               <div className="flex items-center gap-2">
@@ -38,22 +38,12 @@ export default function Footer() {
             <h3 className="font-bold text-lg mb-4" style={{color: "#f16929"}}>OPENINGSTIJDEN</h3>
             <div className="space-y-2 text-sm">
               <p>Ma t/m vr: 07:00 - 21:00</p>
-              <p>Zaterdag: 09:00 - 13:00</p>
+              <p>Oud-Gastel, North Brabant 4751 VK
+              </p>
             </div>
           </div>
 
-          {/* Social */}
-          <div>
-            <h3 className="font-bold text-lg mb-4" style={{color: "#f16929"}}>VOLG ONS</h3>
-            <div className="flex gap-4">
-              <a href="#" className="hover:text-[#FFD700] transition">
-                <Facebook  size={24} />
-              </a>
-              <a href="#" className="hover:text-[#FFD700] transition">
-                <Linkedin size={24} />
-              </a>
-            </div>
-          </div>
+          
         </div>
 
         {/* Bottom */}
