@@ -48,7 +48,6 @@ export default function Contact() {
             <h3 className="text-lg md:text-xl font-bold text-[#f2692a] mb-3">
               Nederland
             </h3>
-            <p className="text-gray-700 mb-1">Amsterdam</p>
             <p className="text-gray-700 mb-1">Oud-Gastel, North Brabant 4751 VK</p>
             <p className="text-gray-700 mb-1">
               Telefoon:{" "}
