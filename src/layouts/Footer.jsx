@@ -9,10 +9,8 @@ export default function Footer() {
         <div className="grid md:grid-cols-4 gap-12 mb-12">
           {/* Logo */}
           <div>
-            <div className="w-20 h-20 bg-white rounded-full flex items-center justify-center border-4 border-[#E63946] mb-4">
-              <span className="text-[#E63946] font-bold text-lg">EU</span>
+              <img src="/logofinal.png" alt=""  style={{width: "60%"}}/>
             </div>
-          </div>
 
           {/* Contact */}
           <div>

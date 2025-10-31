@@ -22,11 +22,11 @@ export default function Header() {
   ];
 
   return (
-    <header className="bg-[#E96C27] text-white sticky top-0 z-50 shadow-md">
+    <header className="bg-[white] text-orange-600 sticky top-0 z-50 shadow-md">
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between relative">
         {/* LOGO */}
         <div className="flex items-center gap-3">
-         <img src="/Logowhite.png" alt="Logo" className="w-14 h-14" />
+         <img src="/logofinal.png" alt="Logo" className="w-14 h-14" />
         </div>
         {/* DESKTOP NAV */}
         <nav className="hidden md:flex items-center gap-8 font-semibold relative">
@@ -37,7 +37,7 @@ export default function Header() {
               `pb-1 border-b-2 transition-all duration-200 ${
                 isActive
                   ? "border-[#122967] text-[#122967]"
-                  : "border-transparent text-white hover:text-[#122967]"
+                  : "border-transparent text-orange-600 hover:text-[#122967]"
               }`
             }
           >
@@ -54,7 +54,7 @@ export default function Header() {
               className={`flex items-center gap-1 pb-1 border-b-2 transition-all duration-200 ${
                 showServices
                   ? "border-[#122967] text-[#122967]"
-                  : "border-transparent text-white hover:text-[#122967]"
+                  : "border-transparent text-orange-600 hover:text-[#122967]"
               }`}
             >
               DIENSTEN
@@ -99,7 +99,7 @@ export default function Header() {
                 `pb-1 border-b-2 transition-all duration-200 ${
                   isActive
                     ? "border-[#122967] text-[#122967]"
-                    : "border-transparent text-white hover:text-[#122967]"
+                    : "border-transparent text-orange-600 hover:text-[#122967]"
                 }`
               }
             >
@@ -107,7 +107,7 @@ export default function Header() {
             </NavLink>
           ))}
 
-          <button className="ml-4 bg-white text-[#2B5A8E] px-3 py-1 rounded-full text-sm font-semibold hover:bg-gray-100 transition">
+          <button className="ml-4 bg-orange-600 text-[white] px-3 py-1 rounded-full text-sm font-semibold hover:bg-gray-100 transition">
             EN
           </button>
         </nav>
