@@ -26,14 +26,8 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between relative">
         {/* LOGO */}
         <div className="flex items-center gap-3">
-          <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center border-4 border-[#E63946] shadow-sm">
-            <span className="text-[#E63946] font-extrabold text-lg">EU</span>
-          </div>
-          <span className="hidden sm:inline font-bold text-xl tracking-wide">
-            CUSTOM
-          </span>
+         <img src="/Logowhite.png" alt="Logo" className="w-14 h-14" />
         </div>
-
         {/* DESKTOP NAV */}
         <nav className="hidden md:flex items-center gap-8 font-semibold relative">
           <NavLink
