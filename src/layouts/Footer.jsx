@@ -35,8 +35,9 @@ export default function Footer() {
           <div>
             <h3 className="font-bold text-lg mb-4" style={{color: "#f16929"}}>OPENINGSTIJDEN</h3>
             <div className="space-y-2 text-sm">
-              <p>Ma t/m vr: 07:00 - 21:00</p>
-              <p>Oud-Gastel, North Brabant 4751 VK
+              <p>Ma t/m vr: 07:00 - 17:00</p>
+              <p>Watermolen 35, 4751 VK, Oud-Gastel, Noord-Brabant
+
               </p>
             </div>
           </div>
