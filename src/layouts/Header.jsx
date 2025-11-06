@@ -7,6 +7,7 @@ import { Menu, X, ChevronDown } from "lucide-react";
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const [showServices, setShowServices] = useState(false);
+  const [showOver, setShowOver] = useState(false);
 
   const diensten = [
     { title: "EXPORTEREN", link: "/diensten/exporteren" },
@@ -15,8 +16,12 @@ export default function Header() {
     { title: "TRANSIT DOCUMENTEN", link: "/diensten/transitdocumenten" },
   ];
 
+  const overons = [
+    { title: "VACATURE", link: "/over-ons/vacature" },
+  ];
+
+
   const navLinks = [
-    { to: "/over-ons", label: "OVER ONS" },
     { to: "/news", label: "NIEUWS" },
     { to: "/contact", label: "CONTACT" },
   ];
@@ -26,7 +31,7 @@ export default function Header() {
       <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between relative">
         {/* LOGO */}
         <div className="flex items-center gap-3">
-         <img src="/logofinal.png" alt="Logo" className="w-14 h-14" />
+          <img src="/logofinal.png" alt="Logo" className="w-14 h-14" />
         </div>
         {/* DESKTOP NAV */}
         <nav className="hidden md:flex items-center gap-8 font-semibold relative">
@@ -34,10 +39,9 @@ export default function Header() {
             to="/"
             end
             className={({ isActive }) =>
-              `pb-1 border-b-2 transition-all duration-200 ${
-                isActive
-                  ? "border-[#122967] text-[#122967]"
-                  : "border-transparent text-orange-600 hover:text-[#122967]"
+              `pb-1 border-b-2 transition-all duration-200 ${isActive
+                ? "border-[#122967] text-[#122967]"
+                : "border-transparent text-orange-600 hover:text-[#122967]"
               }`
             }
           >
@@ -46,36 +50,79 @@ export default function Header() {
 
           {/* Dropdown DIENSTEN */}
           <div
-            className="relative"
-            onMouseEnter={() => setShowServices(true)}
-            onMouseLeave={() => setShowServices(false)}
+  className="relative"
+  onMouseEnter={() => setShowServices(true)}
+  onMouseLeave={() => setShowServices(false)}
+>
+  {/* Clickable main link */}
+  <NavLink
+    to="/diensten"
+    className={`flex items-center gap-1 pb-1 border-b-2 transition-all duration-200 ${
+      showServices
+        ? "border-[#122967] text-[#122967]"
+        : "border-transparent text-orange-600 hover:text-[#122967]"
+    }`}
+  >
+    DIENSTEN
+    <ChevronDown
+      size={16}
+      className={`transition-transform ${showServices ? "rotate-180" : "rotate-0"}`}
+    />
+  </NavLink>
+
+  {/* Dropdown menu */}
+  <div
+    className={`absolute left-0 top-full mt-2 bg-white rounded-md shadow-lg transform transition-all duration-300 ease-out origin-top ${
+      showServices
+        ? "opacity-100 scale-y-100 visible"
+        : "opacity-0 scale-y-0 invisible"
+    }`}
+  >
+    <ul className="flex flex-col py-3 px-6 w-60">
+      {diensten.map((item) => (
+        <li key={item.link}>
+          <NavLink
+            to={item.link}
+            className="block py-2 text-[#122967] text-sm hover:text-[#E96C27] transition-colors"
           >
-            <button
-              className={`flex items-center gap-1 pb-1 border-b-2 transition-all duration-200 ${
-                showServices
+            {item.title}
+          </NavLink>
+        </li>
+      ))}
+    </ul>
+  </div>
+</div>
+
+
+          <div
+            className="relative"
+            onMouseEnter={() => setShowOver(true)}
+            onMouseLeave={() => setShowOver(false)}
+          >
+            {/* Clickable main link */}
+            <NavLink
+              to="/over-ons"
+              className={`flex items-center gap-1 pb-1 border-b-2 transition-all duration-200 ${showOver
                   ? "border-[#122967] text-[#122967]"
                   : "border-transparent text-orange-600 hover:text-[#122967]"
-              }`}
+                }`}
             >
-              DIENSTEN
+              OVER ONS
               <ChevronDown
                 size={16}
-                className={`transition-transform ${
-                  showServices ? "rotate-180" : "rotate-0"
-                }`}
+                className={`transition-transform ${showOver ? "rotate-180" : "rotate-0"}`}
               />
-            </button>
+            </NavLink>
 
             {/* Dropdown menu */}
             <div
-              className={`absolute left-0 top-full mt-2 bg-white rounded-md shadow-lg transform transition-all duration-300 ease-out origin-top ${
-                showServices
+              className={`absolute left-0 top-full mt-2 bg-white rounded-md shadow-lg transform transition-all duration-300 ease-out origin-top ${showOver
                   ? "opacity-100 scale-y-100 visible"
                   : "opacity-0 scale-y-0 invisible"
-              }`}
+                }`}
             >
               <ul className="flex flex-col py-3 px-6 w-60">
-                {diensten.map((item) => (
+                {overons.map((item) => (
                   <li key={item.link}>
                     <NavLink
                       to={item.link}
@@ -96,10 +143,9 @@ export default function Header() {
               to={link.to}
               end
               className={({ isActive }) =>
-                `pb-1 border-b-2 transition-all duration-200 ${
-                  isActive
-                    ? "border-[#122967] text-[#122967]"
-                    : "border-transparent text-orange-600 hover:text-[#122967]"
+                `pb-1 border-b-2 transition-all duration-200 ${isActive
+                  ? "border-[#122967] text-[#122967]"
+                  : "border-transparent text-orange-600 hover:text-[#122967]"
                 }`
               }
             >
@@ -123,9 +169,8 @@ export default function Header() {
 
       {/* MOBILE MENU */}
       <div
-        className={`md:hidden bg-[#122967] transition-all duration-300 overflow-hidden ${
-          isOpen ? "max-h-96 py-4" : "max-h-0"
-        }`}
+        className={`md:hidden bg-[#122967] transition-all duration-300 overflow-hidden ${isOpen ? "max-h-96 py-4" : "max-h-0"
+          }`}
       >
         <nav className="flex flex-col items-start gap-4 px-6 text-sm font-medium text-white">
           <NavLink to="/" end onClick={() => setIsOpen(false)}>
@@ -141,9 +186,8 @@ export default function Header() {
               DIENSTEN
               <ChevronDown
                 size={16}
-                className={`transition-transform ${
-                  showServices ? "rotate-180" : "rotate-0"
-                }`}
+                className={`transition-transform ${showServices ? "rotate-180" : "rotate-0"
+                  }`}
               />
             </button>
 

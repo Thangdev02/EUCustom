@@ -37,12 +37,9 @@ export default function Footer() {
             <div className="space-y-2 text-sm">
               <p>Ma t/m vr: 07:00 - 17:00</p>
               <p>Watermolen 35, 4751 VK, Oud-Gastel, Noord-Brabant
-
               </p>
             </div>
           </div>
-
-          
         </div>
 
         {/* Bottom */}
