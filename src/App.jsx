@@ -16,6 +16,8 @@ import Importeren from "./pages/Diensten/Importeren"
 import Consultancy from "./pages/Diensten/Consultancy"
 import Transitdocumenten from "./pages/Diensten/Transitdocumenten"
 import Vacatures from "./pages/OverOns/Vacatures"
+import DynamicContentPage from "./pages/DynamicContentPage"
+import { dienstenPages } from "./data/dienstenData"
 
 
 export default function Home() {
@@ -23,7 +25,6 @@ export default function Home() {
     <main className="min-h-screen bg-white">
       <Router>
       <Header />
-
       <Routes>
       <Route path="/" element={<HomePage />} />
         <Route path="/news" element={<News />} />
@@ -36,7 +37,13 @@ export default function Home() {
         <Route path="/diensten/importeren" element={<Importeren />} />
         <Route path="/diensten/consultancy" element={<Consultancy />} />
         <Route path="/diensten/transitdocumenten" element={<Transitdocumenten />} />
-
+        {Object.values(dienstenPages).map((page) => (
+              <Route
+                key={page.slug}
+                path={`/diensten/${page.slug}`}
+                element={<DynamicContentPage pageData={page} />}
+              />
+            ))}
       </Routes>
       <Footer />
 

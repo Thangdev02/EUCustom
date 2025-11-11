@@ -153,9 +153,7 @@ export default function Header() {
             </NavLink>
           ))}
 
-          <button className="ml-4 bg-orange-600 text-[white] px-3 py-1 rounded-full text-sm font-semibold hover:bg-gray-100 transition">
-            EN
-          </button>
+         
         </nav>
 
         {/* MOBILE TOGGLE */}
@@ -219,9 +217,7 @@ export default function Header() {
             </NavLink>
           ))}
 
-          <button className="mt-2 bg-white text-[#2B5A8E] px-3 py-1 rounded-full text-sm font-semibold hover:bg-gray-100 transition">
-            EN
-          </button>
+        
         </nav>
       </div>
     </header>
