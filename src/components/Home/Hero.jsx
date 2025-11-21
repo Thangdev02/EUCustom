@@ -4,22 +4,21 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 export default function Hero() {
+  const { t } = useTranslation();
+
   const slides = [
     {
       image: "/image1.jpg",
-      title:
-        "Betrouwbare douane-specialist voor import en export binnen Nederland en andere Europese landen.",
-      description:
-        "Zoekt u professionele ondersteuning bij import, export of andere douaneprocedures? Het ervaren team van EU Customs staat voor u klaar met advies op maat en efficiënte uitvoering van uw internationale handel.",
+      title: t("hero.slide1.title"),
+      description: t("hero.slide1.description"),
     },
     {
       image: "/homeimg2.jpg",
-      title:
-        "Betrouwbare douane- en logistiekpartner voor bedrijven in heel Europa",
-      description:
-        "Met uitgebreide kennis van douane, transport en compliance biedt EU Customs flexibele oplossingen voor uw internationale handel.",
+      title: t("hero.slide2.title"),
+      description: t("hero.slide2.description"),
     },
   ];
 
@@ -110,7 +109,7 @@ export default function Hero() {
             to="/over-ons"
             className="bg-[#f48126] text-white px-8 py-3 rounded-full font-semibold hover:bg-[#1b263b] transition flex items-center gap-2 w-fit"
           >
-            LEES MEER
+            {t("hero.readMore")}
             <ChevronRight size={20} />
           </Link>
         </motion.div>

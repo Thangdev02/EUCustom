@@ -4,31 +4,34 @@ import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useEffect, useState, useRef } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 export default function Services() {
+  const { t } = useTranslation();
+
   const services = [
     {
       image: "./homeimage1.jpg",
-      title: "Exporteren",
-      description: "Professionele export services",
+      title: t("services.exporteren"),
+      description: t("services.exporteren_desc"),
       link: "/diensten/exporteren",
     },
     {
       image: "./homeimage2.jpg",
-      title: "Importeren",
-      description: "Veilige import procedures",
+      title: t("services.importeren"),
+      description: t("services.importeren_desc"),
       link: "/diensten/importeren",
     },
     {
       image: "./homeimage3.jpg",
-      title: "Consultancy",
-      description: "Complete consultancy",
+      title: t("services.consultancy"),
+      description: t("services.consultancy_desc"),
       link: "/diensten/consultancy",
     },
     {
       image: "./homeimage4.jpg",
-      title: "Transitdocumenten",
-      description: "Advies door experts",
+      title: t("services.transit"),
+      description: t("services.transit_desc"),
       link: "/diensten/transitdocumenten",
     },
   ];
@@ -56,11 +59,10 @@ export default function Services() {
     <section className="py-16 md:py-24 bg-gray-50 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4">
         <h2 className="text-3xl md:text-4xl font-bold mb-10 text-center text-[#f37727]">
-          Onze diensten
+          {t("services.title")}
         </h2>
 
         <div className="relative">
-          {/* Slider container */}
           <div className="overflow-hidden" ref={containerRef}>
             <motion.div
               className="flex cursor-grab active:cursor-grabbing"
@@ -92,14 +94,12 @@ export default function Services() {
                       </h3>
                       <p className="text-gray-600">{s.description}</p>
                     </div>
-                   
                   </Link>
                 </div>
               ))}
             </motion.div>
           </div>
 
-          {/* Prev / Next buttons */}
           <button
             onClick={prev}
             disabled={index === 0}
@@ -121,13 +121,12 @@ export default function Services() {
           </button>
         </div>
 
-        {/* CTA */}
         <div className="flex justify-center mt-8">
           <Link
             to="/diensten"
             className="bg-[#f37727] text-white px-8 py-3 rounded-full font-semibold hover:bg-[#d65c0d] transition flex items-center gap-2"
           >
-            ALLE DIENSTEN
+            {t("services.allServices")}
             <ChevronRight size={20} />
           </Link>
         </div>

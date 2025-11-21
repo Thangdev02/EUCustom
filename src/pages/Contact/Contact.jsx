@@ -2,8 +2,11 @@
 
 import { Form, Button } from "react-bootstrap";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 export default function Contact() {
+  const { t } = useTranslation();
+
   const fadeUp = {
     hidden: { opacity: 0, y: 40 },
     visible: (i = 0) => ({
@@ -46,32 +49,22 @@ export default function Contact() {
           {/* Addresses */}
           <motion.div variants={fadeUp} custom={0.4}>
             <h3 className="text-lg md:text-xl font-bold text-[#f2692a] mb-3">
-              Nederland
+              {t("contact.netherlands_title")}
             </h3>
-            <p className="text-gray-700 mb-1">Watermolen 35, 4751 VK, Oud-Gastel, Noord-Brabant
-            </p>
-            <p className="text-gray-700 mb-1"> Kvk nummer: 54139287  </p>
+            <p className="text-gray-700 mb-1">{t("contact.address_nl")}</p>
+            <p className="text-gray-700 mb-1">{t("contact.kvk")}</p>
             <p className="text-gray-700 mb-1">
-              Telefoon:{" "}
-              <a
-                href="tel:+31765964921"
-                className="text-[#f2692a] hover:underline"
-              >
-                + 31 (0) 85 0669 200
-
+              {t("contact.phone_label")}{" "}
+              <a href="tel:+31850669200" className="text-[#f2692a] hover:underline">
+                {t("contact.phone")}
               </a>
             </p>
             <p className="text-gray-700 mb-6">
-              E-mail:{" "}
-              <a
-                href="mailto:infoeucustoms.nl"
-                className="text-[#f2692a] hover:underline"
-              >
-                info@eucustoms.nl
+              {t("contact.email_label")}{" "}
+              <a href="mailto:info@eucustoms.nl" className="text-[#f2692a] hover:underline">
+                {t("contact.email")}
               </a>
             </p>
-
-            
           </motion.div>
         </motion.div>
 
@@ -84,24 +77,24 @@ export default function Contact() {
           custom={0.6}
         >
           <h3 className="text-lg md:text-xl font-semibold mb-6 text-gray-800">
-            Of stuur direct een mail
+            {t("contact.form_title")}
           </h3>
 
           <Form className="space-y-4">
             <Form.Group controlId="formName">
-              <Form.Control type="text" placeholder="Je naam" />
+              <Form.Control type="text" placeholder={t("contact.placeholder_name")} />
             </Form.Group>
 
             <Form.Group controlId="formEmail">
-              <Form.Control type="email" placeholder="Je e-mail" />
+              <Form.Control type="email" placeholder={t("contact.placeholder_email")} />
             </Form.Group>
 
             <Form.Group controlId="formSubject">
-              <Form.Control type="text" placeholder="Onderwerp" />
+              <Form.Control type="text" placeholder={t("contact.placeholder_subject")} />
             </Form.Group>
 
             <Form.Group controlId="formMessage">
-              <Form.Control as="textarea" rows={5} placeholder="Je bericht" />
+              <Form.Control as="textarea" rows={5} placeholder={t("contact.placeholder_message")} />
             </Form.Group>
 
             <div className="mt-4">
@@ -110,7 +103,7 @@ export default function Contact() {
                   variant="dark"
                   className="bg-[#0D1635] hover:bg-[#1E2A52] px-6 py-2 rounded-full text-white font-semibold"
                 >
-                  Verzenden
+                  {t("contact.send_button")}
                 </Button>
               </motion.div>
             </div>

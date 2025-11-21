@@ -1,8 +1,11 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 export default function About() {
+  const { t } = useTranslation();
+
   // Animation variants (cho hiệu ứng reveal mượt)
   const fadeUp = {
     hidden: { opacity: 0, y: 40 },
@@ -25,7 +28,7 @@ export default function About() {
           viewport={{ once: true, amount: 0.3 }}
           className="text-3xl md:text-4xl font-bold mb-12 text-[#f2692a] text-center md:text-left"
         >
-          Al uw douanezaken volledig verzorgd
+          {t("about.title")}
         </motion.h2>
 
         {/* Phần giới thiệu và logo */} 
@@ -38,16 +41,13 @@ export default function About() {
             viewport={{ once: true, amount: 0.3 }}
           >
             <p className="text-gray-600 leading-relaxed mb-6">
-              Douanezaken moeilijk en tijdrovend? Niet als u ze overlaat aan de experts van WA Customs. Ons team van
-              douanespecialisten handelt al uw douanezaken af en zorgt dat alle benodigde documenten zoals inklaringen,
-              oorsprongscertificaten en transportdocumenten tijdig en correct worden aangeleverd bij de douane. Zo weet
-              u zeker dat uw zending altijd op de juiste manier en voorzien van de vereiste documentatie wordt verwerkt.
+              {t("about.intro")}
             </p>
             <a
               href="#"
               className="text-[#f48124] font-semibold hover:underline inline-block"
             >
-              Lees hier meer over ons bedrijf →
+              {t("about.readMore")}
             </a>
           </motion.div>
 
@@ -78,13 +78,10 @@ export default function About() {
           viewport={{ once: true, amount: 0.3 }}
         >
           <h3 className="text-2xl md:text-3xl font-bold mb-6 text-[#f26f2a]">
-            Dé douanespecialisten voor Nederland en België
+            {t("about.section2_title")}
           </h3>
           <p className="text-gray-600 leading-relaxed mb-6">
-            De experts van WA Customs beschikken over alle kennis en vergunningen die nodig zijn om uw import en export
-            volgens alle geldende regels te laten verlopen. Ze kennen de procedures door en door waarom ze voor elke
-            zending van en naar Nederland of België de juiste benodigde documenten kunnen aanmaken. Zo worden uw
-            douanezaken snel, accuraat en tijdig afgehandeld.
+            {t("about.section2_text")}
           </p>
         </motion.div>
 
@@ -97,13 +94,10 @@ export default function About() {
           viewport={{ once: true, amount: 0.3 }}
         >
           <h3 className="text-2xl md:text-3xl font-bold mb-6 text-[#f26f2a]">
-            Advies en ondersteuning
+            {t("about.section3_title")}
           </h3>
           <p className="text-gray-600 leading-relaxed">
-            Daarnaast is WA Customs er voor u met advies over uw internationale handel en wanneer u vragen heeft over
-            import- en exportprocessen of regelgeving. We ondersteunen u bij de voorbereiding en realisatie van invoer
-            en uitvoer, ook als het gaat om uitzonderlijke, eenmalige zendingen. Met onze expertise vinden we overal een
-            oplossing voor.
+            {t("about.section3_text")}
           </p>
         </motion.div>
       </div>
